@@ -15,4 +15,4 @@ date: 2026-09-08T00:00:00Z
 
 | Screen | Repo files |
 | --- | --- |
-| XPL4B Home.dc.html | (nessuno — progettata da zero) |
+| XPL4B Home.dc.html | `index.html`, `styles/site.css`, `scripts/background.js`, `scripts/site.js` |

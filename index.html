@@ -1,0 +1,394 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>XP-L4B — Gioco applicato al business</title>
+<meta name="description" content="XP-L4B progetta esperienze di gioco per aziende, scuole e organizzazioni: piattaforme gamificate, giochi da tavolo e di carte, tornei esport e mondi virtuali.">
+<meta name="theme-color" content="#161826">
+<link rel="icon" href="assets/logo-vert.png">
+
+<!-- Nocturne is the design system of record: every color, font, radius and
+     shadow below resolves to one of its tokens. styles/site.css only adds
+     page-scale layout and this page's three interactive pieces. -->
+<link rel="stylesheet" href="_ds/nocturne-5e430ad9-1417-4553-9bc9-57f014f3a1c1/styles.css">
+<link rel="stylesheet" href="styles/site.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main">Vai al contenuto</a>
+
+<header class="site-header" id="site-header">
+  <div class="wrap site-nav">
+    <a class="brand" href="#top" aria-label="XP-L4B, torna in cima">
+      <img src="assets/logo-oriz.png" alt="XP-L4B" width="2052" height="394">
+    </a>
+
+    <nav class="nav-links" aria-label="Sezioni della pagina">
+      <a href="#cosa-facciamo">Cosa facciamo</a>
+      <a href="#achivia">Achivia</a>
+      <a href="#ceo">CEO</a>
+      <a href="#configuratore">Configuratore</a>
+      <a href="#contatti">Contatti</a>
+    </nav>
+
+    <!-- The page runs the thesis it sells: exploring it earns XP. -->
+    <div class="hud" id="hud">
+      <button class="hud-toggle" type="button" id="hud-toggle" aria-expanded="false" aria-controls="hud-panel">
+        <span class="hud-level" id="hud-level">Lv 1</span>
+        <span class="hud-bar" aria-hidden="true"><span class="hud-fill" id="hud-fill"></span></span>
+        <span class="hud-xp"><span id="hud-xp">0</span> XP</span>
+      </button>
+
+      <div class="hud-panel" id="hud-panel" role="dialog" aria-label="I tuoi progressi" hidden>
+        <h2 id="hud-rank">Visitatore</h2>
+        <ul class="hud-quests" id="hud-quests"></ul>
+        <button class="hud-reset" type="button" id="hud-reset">Azzera i progressi</button>
+      </div>
+    </div>
+
+    <button class="nav-toggle" type="button" id="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Apri il menu">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+  </div>
+
+  <nav class="wrap nav-menu" id="nav-menu" aria-label="Menu" hidden>
+    <ul>
+      <li><a href="#cosa-facciamo">Cosa facciamo</a></li>
+      <li><a href="#achivia">Achivia</a></li>
+      <li><a href="#ceo">CEO</a></li>
+      <li><a href="#configuratore">Configuratore</a></li>
+      <li><a href="#contatti">Contatti</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main id="main">
+
+<!-- ─── hero ──────────────────────────────────────────────────────────────── -->
+<section class="hero" id="top">
+  <canvas class="hero-canvas" id="hero-canvas" aria-hidden="true"></canvas>
+  <div class="wrap hero-inner">
+    <p class="kicker">Gioco applicato al business</p>
+    <h1>Le persone imparano, si impegnano e ricordano <em>quando giocano</em>.</h1>
+    <p class="hero-lede">
+      XP-L4B progetta e costruisce esperienze di gioco per aziende, scuole e organizzazioni:
+      piattaforme gamificate, giochi da tavolo e di carte, tornei esport e mondi virtuali.
+      Ogni progetto parte da un comportamento da cambiare, non da una meccanica da aggiungere.
+    </p>
+    <div class="actions">
+      <a class="btn btn-primary btn-lg" href="#configuratore">
+        Configura il tuo progetto
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"/><path d="M13 6l6 6-6 6"/></svg>
+      </a>
+      <a class="btn btn-secondary btn-lg" href="#cosa-facciamo">Vedi cosa facciamo</a>
+    </div>
+    <div class="hero-meta">
+      <span class="tag tag-outline">Gamification</span>
+      <span class="tag tag-neutral">Serious game</span>
+      <span class="tag tag-neutral">Esport</span>
+      <span class="tag tag-neutral">Metaverso &amp; VR</span>
+    </div>
+  </div>
+</section>
+
+<!-- ─── the one saturated band ────────────────────────────────────────────── -->
+<section class="band">
+  <div class="wrap">
+    <p>
+      Non aggiungiamo <b>punti e badge</b> a quello che già fate.
+      Partiamo dal comportamento che volete vedere e progettiamo il gioco
+      che lo rende <b>la cosa più naturale da fare</b>.
+    </p>
+    <p class="band-note">
+      È il metodo con cui sono nati Achivia e CEO, ed è lo stesso da cui partiamo
+      su ogni progetto su misura.
+    </p>
+  </div>
+</section>
+
+<!-- ─── services ──────────────────────────────────────────────────────────── -->
+<section class="section" id="cosa-facciamo" data-quest="servizi">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <h2>Quattro modi di far giocare un'organizzazione</h2>
+      <p>Digitale, fisico, competitivo, immersivo. Scegliamo il formato dopo aver capito
+        chi deve giocare e perché — non prima.</p>
+    </div>
+
+    <div class="services">
+      <article class="service reveal">
+        <svg class="service-icon" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="7.5" width="19" height="10" rx="4"/><path d="M7 10.5v3M5.5 12h3M16 11.2h.01M18 13.6h.01"/></svg>
+        <h3>Piattaforme gamificate</h3>
+        <p>Prodotti digitali dove le attività di ogni giorno diventano quest, punti esperienza
+          e progressione. Gioco per chi partecipa, numeri per chi coordina.</p>
+        <ul><li>App</li><li>Web</li><li>Quest &amp; XP</li><li>Dashboard</li></ul>
+      </article>
+
+      <article class="service reveal">
+        <svg class="service-icon" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="7.5" y="3.5" width="11" height="15" rx="2"/><path d="M5 6.2 3.2 6.7a2 2 0 0 0-1.4 2.4l2.5 9.3a2 2 0 0 0 2.4 1.4l3.6-1"/><path d="M11 8.5h4M11 11.5h4"/></svg>
+        <h3>Giochi da tavolo e di carte</h3>
+        <p>Serious game fisici su misura: carte, plance e regolamenti che simulano
+          decisioni vere di impresa, di ruolo e di mestiere.</p>
+        <ul><li>Carte</li><li>Board game</li><li>Facilitazione</li></ul>
+      </article>
+
+      <article class="service reveal">
+        <svg class="service-icon" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 4h10v5a5 5 0 0 1-10 0V4Z"/><path d="M7 5.5H4.5v1a3.5 3.5 0 0 0 3 3.46M17 5.5h2.5v1a3.5 3.5 0 0 1-3 3.46"/><path d="M12 14v3M8.5 20h7l-.7-3h-5.6L8.5 20Z"/></svg>
+        <h3>Esport ed eventi</h3>
+        <p>Tornei, competizioni e format live per community, scuole e brand:
+          progettazione del format, produzione e regia.</p>
+        <ul><li>Tornei</li><li>Community</li><li>Live</li></ul>
+      </article>
+
+      <article class="service reveal">
+        <svg class="service-icon" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 2.8 8 4.4v9.6l-8 4.4-8-4.4V7.2l8-4.4Z"/><path d="m4 7.2 8 4.4 8-4.4M12 11.6V21.2"/></svg>
+        <h3>Mondi virtuali e VR</h3>
+        <p>Mappe e ambienti giocabili dentro le piattaforme dove il pubblico passa
+          già il suo tempo, ed esperienze immersive in realtà virtuale.</p>
+        <ul><li>Fortnite</li><li>Minecraft</li><li>Roblox</li><li>VR</li></ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ─── Achivia ───────────────────────────────────────────────────────────── -->
+<section class="section" id="achivia" data-quest="achivia">
+  <div class="wrap">
+    <hr class="rule">
+    <div class="split">
+      <div class="reveal">
+        <div class="section-head" style="margin-bottom: 0">
+          <p class="kicker">Prodotto</p>
+          <h2>Achivia — l'organizzazione come un gioco di ruolo</h2>
+          <p>
+            Obiettivi, attività e riconoscimenti diventano quest, punti esperienza e clan.
+            Le persone vedono la propria progressione; chi coordina vede i numeri
+            dell'organizzazione, mese per mese.
+          </p>
+        </div>
+
+        <ul class="feature-list">
+          <li>
+            <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5 9 17.5 20 6.5"/></svg>
+            <div><b>Quest assegnate e completate</b><span>Ogni attività è una quest con un valore. Stato, scadenze e approvazioni restano visibili a tutti.</span></div>
+          </li>
+          <li>
+            <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8.5" r="3.5"/><path d="M5 20a7 7 0 0 1 14 0"/></svg>
+            <div><b>Profilo, avatar e clan</b><span>Ogni persona ha una scheda, un avatar e un ruolo dentro un clan: l'appartenenza diventa qualcosa che si vede.</span></div>
+          </li>
+          <li>
+            <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8"/><path d="M12 8.2v7.6M9.6 10.1h4.8M9.6 13.9h4.8"/></svg>
+            <div><b>Crediti e riconoscimenti</b><span>I crediti in circolazione rendono i riconoscimenti spendibili, non solo simbolici.</span></div>
+          </li>
+          <li>
+            <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19V5M4 19h16"/><path d="m7.5 15 3.5-4 3 2.5L19 8"/></svg>
+            <div><b>I numeri dell'organizzazione</b><span>Completate in tempo, medie mese per mese, indicatori per persona: gli stessi dati che servono a chi deve decidere.</span></div>
+          </li>
+        </ul>
+
+        <div class="actions" style="margin-top: var(--stack)">
+          <a class="btn btn-primary" href="#contatti">Richiedi una demo di Achivia</a>
+        </div>
+      </div>
+
+      <figure class="shot reveal">
+        <img src="assets/achivia-mockup.png" width="880" height="1260" loading="lazy" decoding="async"
+             alt="Due schermate di Achivia: la scheda di una persona con avatar, clan e quest completate, e la vista dati con l'andamento mese per mese.">
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ─── CEO ───────────────────────────────────────────────────────────────── -->
+<section class="section" id="ceo" data-quest="ceo">
+  <div class="wrap">
+    <hr class="rule">
+    <div class="section-head reveal">
+      <p class="kicker">Prodotto</p>
+      <h2>CEO — il gioco di carte in cui l'impresa siete voi</h2>
+      <p>Un mazzo di persone, ruoli e imprevisti. Ogni carta ha un costo, un effetto e
+        delle conseguenze: chi assumere, dove assegnarlo, quanto engagement può reggere.
+        Si gioca in una sessione e se ne discute per settimane.</p>
+    </div>
+
+    <div class="deck reveal" id="deck">
+      <button class="deck-card" type="button" aria-label="Scopri la carta Nira Bullone">
+        <img src="assets/ceo-card-1.png" width="428" height="604" loading="lazy" decoding="async"
+             alt="Carta CEO: Nira Bullone, dipendente operaio, produce 2 PR per turno se assegnata a una sede produttiva.">
+      </button>
+      <button class="deck-card" type="button" aria-label="Scopri la carta CEO, Bill Ortolo">
+        <img src="assets/ceo-card-2.png" width="520" height="652" loading="lazy" decoding="async"
+             alt="Carta CEO: Bill Ortolo, produce 1 PR per turno e può pagare 4 PR per fare un'offerta di lavoro a un dipendente avversario.">
+      </button>
+      <button class="deck-card" type="button" aria-label="Scopri la carta Mentoring">
+        <img src="assets/ceo-card-6.png" width="432" height="608" loading="lazy" decoding="async"
+             alt="Carta CEO: Mentoring, carta formazione — il dipendente equipaggiato non può essere bersaglio di offerte di lavoro.">
+      </button>
+    </div>
+    <p class="deck-caption">Tre carte dal mazzo — passaci sopra o toccale per vederle a colori.</p>
+
+    <div class="actions reveal" style="margin-top: var(--stack); justify-content: flex-start">
+      <a class="btn btn-primary" href="#contatti">Porta CEO in aula</a>
+      <a class="btn btn-ghost" href="#configuratore">Oppure parti dal configuratore</a>
+    </div>
+  </div>
+</section>
+
+<!-- ─── configurator ──────────────────────────────────────────────────────── -->
+<section class="section" id="configuratore">
+  <div class="wrap">
+    <hr class="rule">
+    <div class="section-head reveal">
+      <h2>Configura il tuo progetto</h2>
+      <p>Tre scelte e vi diciamo da dove partiremmo. Non è un preventivo automatico:
+        serve a mettere a fuoco la conversazione prima di sentirci.</p>
+    </div>
+
+    <div class="config">
+      <form class="config-steps" id="config-form">
+        <div class="step" role="group" aria-labelledby="step-obiettivo">
+          <div class="step-label" id="step-obiettivo">
+            <span class="step-num">01</span>
+            <h3>Qual è l'obiettivo?</h3>
+          </div>
+          <div class="choices">
+            <label class="choice"><input type="radio" name="obiettivo" value="formazione">Formazione e onboarding</label>
+            <label class="choice"><input type="radio" name="obiettivo" value="engagement">Engagement e cultura interna</label>
+            <label class="choice"><input type="radio" name="obiettivo" value="employer">Employer branding e recruiting</label>
+            <label class="choice"><input type="radio" name="obiettivo" value="awareness">Awareness e community</label>
+          </div>
+        </div>
+
+        <div class="step" role="group" aria-labelledby="step-pubblico">
+          <div class="step-label" id="step-pubblico">
+            <span class="step-num">02</span>
+            <h3>Chi deve giocare?</h3>
+          </div>
+          <div class="choices">
+            <label class="choice"><input type="radio" name="pubblico" value="persone">Le persone dell'azienda</label>
+            <label class="choice"><input type="radio" name="pubblico" value="studenti">Studenti e docenti</label>
+            <label class="choice"><input type="radio" name="pubblico" value="clienti">Clienti e community</label>
+          </div>
+        </div>
+
+        <div class="step" role="group" aria-labelledby="step-formato">
+          <div class="step-label" id="step-formato">
+            <span class="step-num">03</span>
+            <h3>In che forma ve lo immaginate?</h3>
+          </div>
+          <div class="choices">
+            <label class="choice"><input type="radio" name="formato" value="digitale">Una piattaforma digitale</label>
+            <label class="choice"><input type="radio" name="formato" value="fisico">Un gioco fisico</label>
+            <label class="choice"><input type="radio" name="formato" value="live">Un evento o una competizione</label>
+            <label class="choice"><input type="radio" name="formato" value="immersivo">Un mondo virtuale</label>
+            <label class="choice"><input type="radio" name="formato" value="aperto">Non lo sappiamo ancora</label>
+          </div>
+        </div>
+      </form>
+
+      <aside class="result" id="config-result" aria-live="polite">
+        <p class="result-kicker">La nostra proposta di partenza</p>
+        <h3 id="result-title">Fate le vostre tre scelte</h3>
+        <p class="result-empty" id="result-empty">Man mano che scegliete, qui compare il punto di partenza che proporremmo — con cosa metteremmo in campo e cosa ci servirebbe sapere da voi.</p>
+        <p id="result-body" hidden></p>
+        <ul id="result-points" hidden></ul>
+        <div class="result-meta" id="result-meta" hidden></div>
+        <a class="btn btn-primary" id="result-cta" href="#contatti" hidden>Parliamone</a>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- ─── contact ───────────────────────────────────────────────────────────── -->
+<section class="section" id="contatti">
+  <div class="wrap">
+    <hr class="rule">
+    <div class="contact">
+      <div class="reveal">
+        <div class="section-head">
+          <h2>Parliamone</h2>
+          <p>Raccontateci l'obiettivo e chi deve giocare. Se avete usato il configuratore,
+            la vostra configurazione viaggia insieme al messaggio.</p>
+        </div>
+
+        <!-- Il form compone un'email con i dati inseriti. Per collegarlo a un backend,
+             sostituire data-email con l'indirizzo reale oppure impostare action/method. -->
+        <form class="contact-form" id="contact-form" data-email="[INDIRIZZO EMAIL DI CONTATTO]">
+          <div class="field">
+            <label for="c-nome">Nome e cognome</label>
+            <input class="input" id="c-nome" name="nome" type="text" autocomplete="name" required>
+          </div>
+          <div class="field">
+            <label for="c-org">Organizzazione</label>
+            <input class="input" id="c-org" name="organizzazione" type="text" autocomplete="organization">
+          </div>
+          <div class="field">
+            <label for="c-email">Email</label>
+            <input class="input" id="c-email" name="email" type="email" autocomplete="email" required>
+          </div>
+          <div class="field">
+            <label for="c-msg">Di cosa avete bisogno</label>
+            <textarea class="input" id="c-msg" name="messaggio" rows="4" required></textarea>
+          </div>
+          <button class="btn btn-primary" type="submit">Invia il messaggio</button>
+          <p class="text-muted" id="contact-status" role="status" style="font-size: 13px; margin: 0"></p>
+        </form>
+      </div>
+
+      <div class="reveal">
+        <dl class="contact-list">
+          <div><dt>Email</dt><dd>[INDIRIZZO EMAIL DI CONTATTO]</dd></div>
+          <div><dt>Telefono</dt><dd>[NUMERO DI TELEFONO]</dd></div>
+          <div><dt>Sede</dt><dd>[INDIRIZZO DELLA SEDE]</dd></div>
+          <div><dt>LinkedIn</dt><dd><a href="[URL LINKEDIN]">XP-L4B su LinkedIn</a></dd></div>
+        </dl>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-inner">
+      <div class="footer-mark">
+        <img src="assets/logo-vert.png" width="1393" height="831" loading="lazy" decoding="async" alt="XP-L4B">
+      </div>
+      <div class="footer-cols">
+        <div class="footer-col">
+          <h3>Prodotti</h3>
+          <ul>
+            <li><a href="#achivia">Achivia</a></li>
+            <li><a href="#ceo">CEO</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>Servizi</h3>
+          <ul>
+            <li><a href="#cosa-facciamo">Piattaforme gamificate</a></li>
+            <li><a href="#cosa-facciamo">Giochi da tavolo e di carte</a></li>
+            <li><a href="#cosa-facciamo">Esport ed eventi</a></li>
+            <li><a href="#cosa-facciamo">Mondi virtuali e VR</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>Contatti</h3>
+          <ul>
+            <li><a href="#configuratore">Configura il tuo progetto</a></li>
+            <li><a href="#contatti">Scrivici</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <p class="footer-legal">© 2026 XP-L4B — [RAGIONE SOCIALE] · P.IVA [PARTITA IVA] · [LINK PRIVACY POLICY]</p>
+  </div>
+</footer>
+
+<div class="toasts" id="toasts" aria-live="polite" aria-atomic="false"></div>
+
+<script src="scripts/background.js" defer></script>
+<script src="scripts/site.js" defer></script>
+</body>
+</html>
